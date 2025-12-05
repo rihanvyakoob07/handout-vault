@@ -70,3 +70,4 @@ vite.config.timestamp-*
 # OS files
 # -------------------------------
 Desktop.ini
+frontend/src/firebase.js
