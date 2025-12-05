@@ -1,16 +1,15 @@
-from sqlmodel import create_engine, Session, SQLModel
-from typing import Generator
-from app.config import settings
+# backend/app/deps.py
 import os
+from sqlmodel import create_engine, Session
+from app.config import Settings
 
-# Use SQLite for local dev. File path: ./data/db.sqlite
-db_path = os.environ.get("DATABASE_URL", "sqlite:///./data/db.sqlite")
+settings = Settings()
 
-engine = create_engine(db_path, connect_args={"check_same_thread": False} if db_path.startswith("sqlite") else {})
+DB_PATH = os.path.abspath("data/db.sqlite")
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
-def get_session() -> Generator[Session, None, None]:
-    with Session(engine) as session:
-        yield session
+engine = create_engine(f"sqlite:///{DB_PATH}", connect_args={"check_same_thread": False})
 
-def init_db():
-    SQLModel.metadata.create_all(engine)
+def get_session():
+    with Session(engine) as s:
+        yield s

@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- GLOBAL LAYOUT ---------- */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  @apply transition-colors duration-300;
+}
+
+/* Dark mode background */
+html.dark, body.dark {
+  background: #0f172a;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Dark mode scrollbar */
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* ---------- GLASS PANELS (for TopBar & Right Sidebar) ---------- */
+.glass-panel {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+html.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* ---------- CARD SHADOWS ---------- */
+.card {
+  @apply bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-200;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition;
+}
+
+.btn-outline {
+  @apply border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-left {
+  animation: slideLeft 0.4s ease forwards;
+}
+
+.slide-right {
+  animation: slideRight 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ---------- UTILITY FOR SIDEBAR WIDTH ---------- */
+.sidebar-right {
+  width: 280px;
+  @apply fixed top-0 right-0 h-full border-l border-slate-200 dark:border-slate-700;
+}
+
+.content-area {
+  margin-right: 280px;
+  @apply min-h-screen;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}

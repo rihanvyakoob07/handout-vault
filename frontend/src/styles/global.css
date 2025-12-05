@@ -1,0 +1,12 @@
+:root{
+  --navy:#001f3f;
+  --white:#ffffff;
+  --muted:#f3f5f7;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial;background:var(--muted);color:#222}
+.app-root{display:flex;height:100vh;overflow:hidden}
+.main-content{flex:1;padding:20px;overflow:auto;margin-right:270px}
+.page{background:#fff;border-radius:8px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+.loading{padding:40px;text-align:center}
+.forbidden{padding:40px;color:red}

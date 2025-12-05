@@ -1,0 +1,2 @@
+.subject-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.subject-card{background:#fff;padding:20px;border-radius:8px;text-decoration:none;color:#111;display:block;box-shadow:0 4px 12px rgba(0,0,0,0.05)}

@@ -1,12 +1,9 @@
 fastapi
-uvicorn[standard]
+uvicorn
 sqlmodel
-sqlalchemy
-pydantic
-python-dotenv
-passlib[bcrypt]
+firebase-admin
+qdrant-client
 python-multipart
-boto3
-python-jose[cryptography]
-python-magic
+sentence-transformers
 aiofiles
+python-dotenv

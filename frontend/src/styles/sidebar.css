@@ -1,0 +1,9 @@
+.right-sidebar{position:fixed;top:0;right:0;height:100vh;width:270px;background:var(--navy);color:var(--white);display:flex;flex-direction:column;align-items:stretch}
+.right-sidebar.collapsed{width:72px}
+.rs-top{display:flex;justify-content:flex-end;padding:12px}
+.burger{background:transparent;border:none;color:white;cursor:pointer;padding:8px}
+.rs-nav{display:flex;flex-direction:column;gap:6px;padding:10px}
+.rs-item{display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;padding:12px;border-radius:6px;font-weight:600}
+.rs-item svg{width:18px;height:18px}
+.rs-item:hover{background:rgba(255,255,255,0.06)}
+.rs-item.active{background:rgba(255,255,255,0.08)}

@@ -1,6 +1,72 @@
-node_modules/
-.env
-.next/
-dist/
-__pycache__/
+# -------------------------------
+# Global
+# -------------------------------
+.DS_Store
+Thumbs.db
 *.log
+*.tmp
+
+# -------------------------------
+# Environment Variables / Secrets
+# -------------------------------
+.env
+.env.local
+.env.*.local
+firebase-key.json
+serviceAccount.json
+
+# -------------------------------
+# Python / FastAPI backend
+# -------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+
+# FastAPI build
+dist/
+build/
+
+# Database or JSON store (your app uses this)
+handout_data.json
+
+# Uploaded files
+uploads/
+uploads/*
+
+# SQLite file (if used later)
+*.db
+*.sqlite3
+
+# -------------------------------
+# Node / React frontend
+# -------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite build output
+dist/
+build/
+
+# Local dev cache
+.vite/
+vite.config.timestamp-*
+
+# -------------------------------
+# IDE / Editor settings
+# -------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -------------------------------
+# OS files
+# -------------------------------
+Desktop.ini

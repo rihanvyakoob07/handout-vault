@@ -1,0 +1,8 @@
+.subject-detail-page{display:flex;gap:20px}
+.left-col{width:220px;background:#fafafa;padding:12px;border-radius:8px}
+.left-col ul{list-style:none;padding:0}
+.left-col li{padding:8px;border-radius:6px;cursor:pointer}
+.left-col li.active{background:rgba(0,31,63,0.08)}
+.right-col{width:240px;background:#fafafa;padding:12px;border-radius:8px}
+.note-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.note-preview{background:#fff;border-radius:8px;padding:12px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
